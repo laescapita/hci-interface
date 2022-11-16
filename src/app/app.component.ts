@@ -14,6 +14,9 @@ export class AppComponent {
   shiftUp = false;
   sPressed = false;
 
+  buttonClickedEvent(){
+    this.buttonClicked = true;
+  }
 
   onKeyDown(event: any){
     this.shiftDown = true;

@@ -20,6 +20,12 @@
     margin: 0;
   }
 
+  .screen{
+    cursor: url("/assets/images/smiley.png"), auto;
+    height: 100%;
+    width: 100%
+  }
+
   .button {
     position: absolute;
     top:50%;
@@ -97,5 +103,6 @@
   .card.card.highlight-card span {
     margin-left: 60px;
   }
+
 
  

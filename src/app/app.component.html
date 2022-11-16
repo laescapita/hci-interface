@@ -1,3 +1,4 @@
+<div [ngClass]="{'screen':buttonClicked}"> <!--conditional class-->
 <div class="card">
   <div class="row">
     <h1 style="color:white">HCI Interface Events</h1>
@@ -5,7 +6,7 @@
   <!-- <router-outlet></router-outlet> -->
 </div>
 <div>
-  <button (click)="buttonClicked=true" (mouseover)="mouseOverCondition=true" (mouseout)="mouseOutCondition=true" type="button" class="btn btn-primary">Click Me!</button>
+  <button (click)="buttonClickedEvent()" (mouseover)="mouseOverCondition=true" (mouseout)="mouseOutCondition=true" type="button" class="btn btn-primary">Click Me!</button>
 </div>
 <input (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)">
 
@@ -17,7 +18,9 @@
 <h4 *ngIf="sPressed==true" style="color:white">S Pressed</h4> -->
 
 <div *ngIf="secretConditionsMet()" style="color:white">
-THE SECRET YAY
+  <img src="assets/images/cat_thumbs_up.jpg" alt="image">
+&lt;(YOU FOUND ME! GOOD JOB!)
+</div>
 </div>
 
 
