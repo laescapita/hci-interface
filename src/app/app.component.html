@@ -1,4 +1,4 @@
-<div [ngClass]="{'screen':buttonClicked}"> <!--conditional class-->
+<div [ngClass]="{'screen':buttonClicked}" (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)"> <!--conditional class-->
 <div class="card">
   <div class="row">
     <h1 style="color:white">HCI Interface Events</h1>
@@ -8,7 +8,7 @@
 <div>
   <button (click)="buttonClickedEvent()" (mouseover)="mouseOverCondition=true" (mouseout)="mouseOutCondition=true" type="button" class="btn btn-primary">Click Me!</button>
 </div>
-<input (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)">
+<!-- <input (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)"> -->
 
 <!-- <h4 *ngIf="mouseOverCondition==true" style="color:white">Hovering</h4>
 <h4 *ngIf="mouseOutCondition==true" style="color:white">Out</h4>
