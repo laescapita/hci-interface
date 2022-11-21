@@ -16,18 +16,19 @@
 <h5 style="color: black">Choose your budget</h5>
 <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
 <h5 style="color: black">Choose countries to visit</h5>
-  <input type="checkbox" id="country1" name="vehicle1" value="MexicoCheck" (change)="checkMexico($event)">
-  <label for="country1"> Mexico</label><br>
-  <img src="assets/images/MexicoCity.jpg" alt="Mexico" width="200" height="200"><br>
-  <input type="checkbox" id="country2" name="vehicle2" value="PanamaCheck" (change)="checkPanama($event)">
-  <label for="country2"> Panama</label><br>
-  <img src="assets/images/Biomuseo-Panama.jpg" alt="Panama" width="200" height="200"><br>
-  <input type="checkbox" id="country3" name="vehicle3" value="ArgentinaCheck" (change)="checkArgentina($event)">
-  <label for="country3"> Argentina</label><br><br>
-  <img src="assets/images/obelisk-in-buenos-aires.jpg" alt="Argentina" width="200" height="200"><br>
 
-  <button (click)="calculateFares()">Calculate</button>
-  {{message}}
+<input type="checkbox" id="country1" name="vehicle1" value="MexicoCheck" (change)="checkMexico($event)">
+<label for="country1"> Mexico</label><br>
+<img src="assets/images/MexicoCity.jpg" alt="Mexico" width="200" height="200"><br>
+<input type="checkbox" id="country2" name="vehicle2" value="PanamaCheck" (change)="checkPanama($event)">
+<label for="country2"> Panama</label><br>
+<img src="assets/images/Biomuseo-Panama.jpg" alt="Panama" width="200" height="200"><br>
+<input type="checkbox" id="country3" name="vehicle3" value="ArgentinaCheck" (change)="checkArgentina($event)">
+<label for="country3"> Argentina</label><br><br>
+<img src="assets/images/obelisk-in-buenos-aires.jpg" alt="Argentina" width="200" height="200"><br>
+
+<button (click)="calculateFares()">Calculate</button>
+{{message}}
 
 
 <!-- <div>
