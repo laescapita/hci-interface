@@ -1,4 +1,7 @@
+import { outputAst } from '@angular/compiler';
 import { Component } from '@angular/core';
+import { Options } from '@angular-slider/ngx-slider';
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +16,52 @@ export class AppComponent {
   shiftDown = false;
   shiftUp = false;
   sPressed = false;
+
+  MexicoCheck = false;
+  PanamaCheck = false;
+  ArgentinaCheck = false;
+  message = "";
+
+  value: number = 100;
+  options: Options = {
+    floor: 0,
+    ceil: 3000
+  };
+
+  calculateFares(){
+    if(this.value >= 0 && this.value <= 500){
+      this.message = "Not Enough!";
+    }
+    if((this.value >= 501 && this.value <= 1000)&&(this.MexicoCheck || this.PanamaCheck || this.ArgentinaCheck)){
+      this.message = "Barely Enough!";
+    }
+    if((this.value >= 1001 && this.value <= 2000)&&(this.MexicoCheck || this.PanamaCheck || this.ArgentinaCheck)){
+      this.message = "Leisure Time!";
+    }
+    if((this.value >= 1001 && this.value <= 2000)&&((this.MexicoCheck && this.PanamaCheck) || (this.MexicoCheck && this.ArgentinaCheck) || (this.PanamaCheck && this.ArgentinaCheck))){
+      this.message = "Good Enough!";
+    }
+    if((this.value >= 1001 && this.value <= 2000)&&(this.MexicoCheck && this.PanamaCheck && this.ArgentinaCheck)){
+      this.message = "Barely Enough!";
+    }
+    if(this.value >= 2001){
+      this.message = "Wow you are rich!"
+    }
+  }
+
+  checkArgentina(event: any){
+    this.ArgentinaCheck = !this.ArgentinaCheck;
+    console.log(this.ArgentinaCheck);
+  }
+
+  checkMexico(event: any){
+    this.MexicoCheck = !this.MexicoCheck;
+  }
+
+  checkPanama(event: any){
+    this.PanamaCheck = !this.PanamaCheck;
+  }
+
 
   buttonClickedEvent(){
     this.buttonClicked = true;

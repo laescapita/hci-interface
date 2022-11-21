@@ -1,13 +1,38 @@
-<div [ngClass]="{'screen':buttonClicked}" (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)"> <!--conditional class-->
+<!-- <div [ngClass]="{'screen':buttonClicked}" (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)"> conditional class -->
+<div>
 <div class="card">
   <div class="row">
-    <h1 style="color:white">HCI Interface Events</h1>
+    <h1 style="color:white">HCI Interface Prototype</h1>
   </div>
   <!-- <router-outlet></router-outlet> -->
 </div>
-<div>
+<!-- <h1 style="color: white">Custom Range Slider</h1>
+<p style="color: white">Drag the slider to display the current value.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  <p style="color: white">Value: {{this.output}}</p>
+</div> -->
+<h5 style="color: black">Choose your budget</h5>
+<ngx-slider [(value)]="value" [options]="options"></ngx-slider>
+<h5 style="color: black">Choose countries to visit</h5>
+  <input type="checkbox" id="country1" name="vehicle1" value="MexicoCheck" (change)="checkMexico($event)">
+  <label for="country1"> Mexico</label><br>
+  <img src="assets/images/MexicoCity.jpg" alt="Mexico" width="200" height="200"><br>
+  <input type="checkbox" id="country2" name="vehicle2" value="PanamaCheck" (change)="checkPanama($event)">
+  <label for="country2"> Panama</label><br>
+  <img src="assets/images/Biomuseo-Panama.jpg" alt="Panama" width="200" height="200"><br>
+  <input type="checkbox" id="country3" name="vehicle3" value="ArgentinaCheck" (change)="checkArgentina($event)">
+  <label for="country3"> Argentina</label><br><br>
+  <img src="assets/images/obelisk-in-buenos-aires.jpg" alt="Argentina" width="200" height="200"><br>
+
+  <button (click)="calculateFares()">Calculate</button>
+  {{message}}
+
+
+<!-- <div>
   <button (click)="buttonClickedEvent()" (mouseover)="mouseOverCondition=true" (mouseout)="mouseOutCondition=true" type="button" class="btn btn-primary">Click Me!</button>
-</div>
+</div> -->
 <!-- <input (keydown.shift)="onKeyDown($event)" (keyup.shift)="onKeyUp($event)" (keydown.s)="onSKeyDown($event)"> -->
 
 <!-- <h4 *ngIf="mouseOverCondition==true" style="color:white">Hovering</h4>
@@ -17,11 +42,13 @@
 <h4 *ngIf="shiftUp==true" style="color:white">Shift Off</h4>
 <h4 *ngIf="sPressed==true" style="color:white">S Pressed</h4> -->
 
-<div *ngIf="secretConditionsMet()" style="color:white">
+<!-- <div *ngIf="secretConditionsMet()" style="color:white">
   <img src="assets/images/cat_thumbs_up.jpg" alt="image">
 &lt;(YOU FOUND ME! GOOD JOB!)
+</div>-->
 </div>
-</div>
+
+
 
 
 
