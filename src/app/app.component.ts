@@ -38,7 +38,8 @@ export class AppComponent {
     if((this.value >= 1001 && this.value <= 2000)&&(this.MexicoCheck || this.PanamaCheck || this.ArgentinaCheck)){
       this.message = "Leisure Time!";
     }
-    if((this.value >= 1001 && this.value <= 2000)&&((this.MexicoCheck && this.PanamaCheck) || (this.MexicoCheck && this.ArgentinaCheck) || (this.PanamaCheck && this.ArgentinaCheck))){
+    if((this.value >= 1001 && this.value <= 2000)&&((this.MexicoCheck && this.PanamaCheck) || (this.MexicoCheck && this.ArgentinaCheck) 
+    || (this.PanamaCheck && this.ArgentinaCheck))){
       this.message = "Good Enough!";
     }
     if((this.value >= 1001 && this.value <= 2000)&&(this.MexicoCheck && this.PanamaCheck && this.ArgentinaCheck)){
